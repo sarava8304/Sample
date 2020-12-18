@@ -10,15 +10,15 @@ pool:
  name: Hosted VS2017
  steps:
  Settings
- -task: Copyfiles@2
+ -task: CopyFiles@2
 displayname: 'Copy files to: $(Build.ArtifactStagingDirectory)/Samplefiles'
 inputs:
-Sourcefolder:Samplefiles
+SourceFolder:SampleFiles
 Contents:'**/*.pbix'
 TargetFolder: '$(Build.ArtifactStagingDirectory)/Samplefiles'
 
 Settings
 -task: PublishArtifacts@1
-displayname" 'Publish Artifact: VSTTasks'
+displayName: 'Publish Artifact: VSTTasks'
 inputs:
 ArtifactName: VSTasks
